@@ -1,0 +1,36 @@
+# TWO COMPARTMENT PHANTOM
+
+/gate/world/daughters/name phantom
+/gate/world/daughters/insert box
+/gate/phantom/geometry/setXLength 50. mm
+/gate/phantom/geometry/setYLength 50. mm
+/gate/phantom/geometry/setZLength 250. mm
+/gate/phantom/vis/forceWireframe
+/gate/phantom/vis/setColor white
+/gate/phantom/setMaterial Air
+
+#First compartment
+/gate/phantom/daughters/name first_comp
+/gate/phantom/daughters/insert box
+/gate/first_comp/geometry/setXLength 50. mm
+/gate/first_comp/geometry/setYLength 50. mm
+/gate/first_comp/geometry/setZLength 125. mm
+/gate/first_comp/placement/setTranslation 0.0 0.0 72.5 mm
+/gate/first_comp/vis/forceSolid
+/gate/first_comp/vis/setColor white
+/gate/first_comp/setMaterial PMMA
+
+#Second compartment
+/gate/phantom/daughters/name first_comp
+/gate/phantom/daughters/insert box
+/gate/first_comp/geometry/setXLength 50. mm
+/gate/first_comp/geometry/setYLength 50. mm
+/gate/first_comp/geometry/setZLength 125. mm
+/gate/first_comp/placement/setTranslation 0.0 0.0 -72.5 mm
+/gate/first_comp/vis/forceSolid
+/gate/first_comp/vis/setColor yellow
+/gate/first_comp/setMaterial Brain
+
+#/gate/phantom/attachPhantomSD
+
+

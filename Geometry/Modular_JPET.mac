@@ -1,0 +1,191 @@
+# WORLD INITIALIZATION
+
+/gate/world/geometry/setXLength 850. mm
+/gate/world/geometry/setYLength 850. mm
+/gate/world/geometry/setZLength 1410. mm
+
+
+# SCANNER
+
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert cylinder
+/gate/scanner/setMaterial Air
+/gate/scanner/geometry/setRmin 369.61 mm
+/gate/scanner/geometry/setRmax 400 mm
+/gate/scanner/geometry/setHeight 912. mm
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setColor red
+
+
+# FIRST MODULE WITH PLASTIC + SIPM + SHIELD
+
+/gate/scanner/daughters/name module
+/gate/scanner/daughters/insert box
+/gate/module/placement/setTranslation 0.0 381.86 0.0 mm
+/gate/module/geometry/setXLength 96 mm
+/gate/module/geometry/setYLength 34 mm
+/gate/module/geometry/setZLength 912. mm
+/gate/module/setMaterial Air
+/gate/module/vis/forceWireframe 1
+/gate/module/vis/forceSolid 0
+/gate/module/vis/setColor blue
+
+	
+# SHIELD 1 THINK ABOUT THE ALU !!!!
+
+/gate/module/daughters/name shield1
+/gate/module/daughters/insert box
+/gate/shield1/placement/setTranslation 0.0 0.0 342.0 mm
+/gate/shield1/geometry/setXLength 96. mm
+/gate/shield1/geometry/setYLength 34. mm
+/gate/shield1/geometry/setZLength 228. mm
+/gate/shield1/setMaterial Plastic
+/gate/shield1/vis/forceWireframe
+/gate/shield1/vis/setColor grey
+
+/gate/shield1/daughters/name shield1_air
+/gate/shield1/daughters/insert box
+/gate/shield1_air/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield1_air/geometry/setXLength 91. mm
+/gate/shield1_air/geometry/setYLength 24.5 mm
+/gate/shield1_air/geometry/setZLength 228. mm
+/gate/shield1_air/setMaterial Air
+/gate/shield1_air/vis/forceWireframe
+/gate/shield1_air/vis/setColor grey
+
+# SHIELD 2 THINK ABOUT THE ALU !!!!
+/gate/module/daughters/name shield2
+/gate/module/daughters/insert box
+/gate/shield2/placement/setTranslation 0.0 0.0 -342.0 mm
+/gate/shield2/geometry/setXLength 96. mm
+/gate/shield2/geometry/setYLength 34. mm
+/gate/shield2/geometry/setZLength 228. mm
+/gate/shield2/setMaterial Plastic
+/gate/shield2/vis/forceWireframe
+/gate/shield2/vis/setColor grey
+
+/gate/shield2/daughters/name shield2_air
+/gate/shield2/daughters/insert box
+/gate/shield2_air/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/shield2_air/geometry/setXLength 91. mm
+/gate/shield2_air/geometry/setYLength 24.5 mm
+/gate/shield2_air/geometry/setZLength 228. mm
+/gate/shield2_air/setMaterial Air
+/gate/shield2_air/vis/forceWireframe
+/gate/shield2_air/vis/setColor grey
+
+
+# PLASTICS WITH WRAPPING + SIPM
+# active_volume consists of two layers of wrapping, plastics and sipms
+
+/gate/module/daughters/name active_volume
+/gate/module/daughters/insert box
+/gate/active_volume/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/active_volume/geometry/setXLength 90.5 mm
+/gate/active_volume/geometry/setYLength 24.5 mm
+/gate/active_volume/geometry/setZLength 502. mm
+/gate/active_volume/setMaterial Air
+/gate/active_volume/vis/forceWireframe 0
+/gate/active_volume/vis/setColor magenta
+
+#SiPM 1
+
+/gate/active_volume/daughters/name sipm1
+/gate/active_volume/daughters/insert box
+/gate/sipm1/placement/setTranslation 0.0 0.0 250.5 mm
+/gate/sipm1/geometry/setXLength 90 mm
+/gate/sipm1/geometry/setYLength 24 mm
+/gate/sipm1/geometry/setZLength 1. mm
+/gate/sipm1/setMaterial Air
+/gate/sipm1/vis/forceSolid
+/gate/sipm1/vis/setColor red
+
+
+#SiPM 2
+
+/gate/active_volume/daughters/name sipm2
+/gate/active_volume/daughters/insert box
+/gate/sipm2/placement/setTranslation 0.0 0.0 -250.5 mm
+/gate/sipm2/geometry/setXLength 90 mm
+/gate/sipm2/geometry/setYLength 24 mm
+/gate/sipm2/geometry/setZLength 1. mm
+/gate/sipm2/setMaterial Air
+/gate/sipm2/vis/forceSolid
+/gate/sipm2/vis/setColor red
+
+
+# ALL PANELs
+
+/gate/active_volume/daughters/name all_panels
+/gate/active_volume/daughters/insert box
+/gate/all_panels/placement/setTranslation 0.0 0.0 0 mm
+/gate/all_panels/geometry/setXLength 90.5 mm
+/gate/all_panels/geometry/setYLength 24.5 mm
+/gate/all_panels/geometry/setZLength 500. mm
+/gate/all_panels/setMaterial Air
+/gate/all_panels/vis/forceWireframe 1
+/gate/all_panels/vis/setColor magenta
+
+
+# SINGLE PANEL WITH WRAPPING (EXTERNAL LAYER)
+
+/gate/all_panels/daughters/name single_panel
+/gate/all_panels/daughters/insert box
+/gate/single_panel/placement/setTranslation 0.0 0.0 0 mm
+/gate/single_panel/geometry/setXLength 6.2062 mm
+/gate/single_panel/geometry/setYLength 24.2062 mm
+/gate/single_panel/geometry/setZLength 500. mm
+/gate/single_panel/setMaterial Kapton
+/gate/single_panel/vis/forceWireframe 1
+/gate/single_panel/vis/setColor yellow
+
+
+# INTERNAL LAYER IN SINGLE PANEL
+
+/gate/single_panel/daughters/name internal_layer
+/gate/single_panel/daughters/insert box
+/gate/internal_layer/placement/setTranslation 0.0 0.0 0 mm
+/gate/internal_layer/geometry/setXLength 6.0762 mm
+/gate/internal_layer/geometry/setYLength 24.0762 mm
+/gate/internal_layer/geometry/setZLength 500. mm
+# THE MATERIAL SHOULD BE THE VIKUITI FOIL - NOT ACHIEVABLE FOR US SO FAR
+/gate/internal_layer/setMaterial Air
+/gate/internal_layer/vis/forceWireframe 1
+/gate/internal_layer/vis/setColor yellow
+
+# PLASTIC
+
+/gate/internal_layer/daughters/name plastic
+/gate/internal_layer/daughters/insert box
+/gate/plastic/placement/setTranslation 0.0 0.0 0 mm
+/gate/plastic/geometry/setXLength 6 mm
+/gate/plastic/geometry/setYLength 24 mm
+/gate/plastic/geometry/setZLength 500. mm
+/gate/plastic/setMaterial EJ230
+/gate/plastic/vis/forceSolid
+/gate/plastic/vis/setColor white
+
+# REPEATERS
+
+# SINGLE_PANEL in ALL_PANELS
+/gate/single_panel/repeaters/insert cubicArray
+/gate/single_panel/cubicArray/setRepeatNumberX 7
+/gate/single_panel/cubicArray/setRepeatNumberY 1
+/gate/single_panel/cubicArray/setRepeatNumberZ 1
+/gate/single_panel/cubicArray/setRepeatVector 7. 0. 0. mm
+
+# MODULE in the whole ring
+
+/gate/module/repeaters/insert ring
+/gate/module/ring/setRepeatNumber 30
+
+# ATTACHEMENTS
+
+/gate/systems/scanner/level1/attach all_panels
+/gate/systems/scanner/level2/attach single_panel
+/gate/systems/scanner/level3/attach internal_layer
+/gate/systems/scanner/level4/attach plastic
+
+/gate/plastic/attachCrystalSD
+
+

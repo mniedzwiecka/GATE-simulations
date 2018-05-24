@@ -1,0 +1,83 @@
+# WORLD INITIALIZATION
+/gate/world/geometry/setXLength 3000. mm
+/gate/world/geometry/setYLength 3000. mm
+/gate/world/geometry/setZLength 3000. mm
+
+# SCANNER
+/gate/world/daughters/name scanner
+/gate/world/daughters/insert cylinder
+/gate/scanner/setMaterial Air
+/gate/scanner/geometry/setRmin 200. mm
+/gate/scanner/geometry/setRmax 207. mm
+/gate/scanner/geometry/setHeight 502. mm
+/gate/scanner/vis/forceWireframe
+/gate/scanner/vis/setColor blue
+
+# FIRST STRIP PANEL WITH PMTs
+/gate/scanner/daughters/name strip_panel
+/gate/scanner/daughters/insert box
+/gate/strip_panel/placement/setTranslation 0.0 203.5 0.0 mm
+/gate/strip_panel/geometry/setXLength 19. mm
+/gate/strip_panel/geometry/setYLength 7. mm
+/gate/strip_panel/geometry/setZLength 501. mm
+/gate/strip_panel/setMaterial Air
+/gate/strip_panel/vis/forceWireframe 1
+/gate/strip_panel/vis/forceSolid 0
+/gate/strip_panel/vis/setColor blue
+
+# PLASTIC IN THE STRIP
+/gate/strip_panel/daughters/name plastic
+/gate/strip_panel/daughters/insert box
+/gate/plastic/placement/setTranslation 0.0 0.0 0.0 mm
+/gate/plastic/geometry/setXLength 19. mm
+/gate/plastic/geometry/setYLength 7. mm
+/gate/plastic/geometry/setZLength 500. mm
+/gate/plastic/setMaterial EJ230
+/gate/plastic/vis/forceSolid
+/gate/plastic/vis/setColor yellow
+
+# PMT 1
+/gate/strip_panel/daughters/name pmt1
+/gate/strip_panel/daughters/insert box
+/gate/pmt1/placement/setTranslation 0.0 0.0 250.5 mm
+/gate/pmt1/geometry/setXLength 19. mm
+/gate/pmt1/geometry/setYLength 7. mm
+/gate/pmt1/geometry/setZLength 1. mm
+/gate/pmt1/setMaterial Air
+/gate/pmt1/vis/forceSolid
+/gate/pmt1/vis/setColor red
+
+# PMT 2
+/gate/strip_panel/daughters/name pmt2
+/gate/strip_panel/daughters/insert box
+/gate/pmt2/placement/setTranslation 0.0 0.0 -250.5 mm
+/gate/pmt2/geometry/setXLength 19. mm
+/gate/pmt2/geometry/setYLength 7. mm
+/gate/pmt2/geometry/setZLength 1. mm
+/gate/pmt2/setMaterial Air
+/gate/pmt2/vis/forceSolid
+/gate/pmt2/vis/setColor red
+
+# HAVE TO BE ADDED BEFORE OPTICAL!!!
+#/gate/run/initialize
+
+# OPTICAL 1
+#/gate/strip_panel/surfaces/name opt_crystal1
+#/gate/strip_panel/surfaces/insert pmt1
+#/gate/strip_panel/surfaces/opt_crystal1/setSurface R4998
+
+# OPTICAL 2
+#/gate/strip_panel/surfaces/name opt_crystal2
+#/gate/strip_panel/surfaces/insert pmt2
+#/gate/strip_panel/surfaces/opt_crystal2/setSurface R4998
+
+# REPEATERS - RING WITH 2 PANELS
+/gate/strip_panel/repeaters/insert ring
+/gate/strip_panel/ring/setRepeatNumber 2
+
+# ATTACHEMENTS
+/gate/systems/scanner/level1/attach strip_panel
+/gate/systems/scanner/level2/attach plastic
+/gate/plastic/attachCrystalSD
+
+

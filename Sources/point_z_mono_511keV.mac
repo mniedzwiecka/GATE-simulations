@@ -1,0 +1,14 @@
+/gate/source/addSource                prot     gps
+/gate/source/prot/gps/particle        proton
+/gate/source/prot/gps/ene/type        Gauss
+/gate/source/prot/gps/ene/mono        100 MeV
+/gate/source/prot/gps/ene/sigma       .3 MeV
+/gate/source/prot/gps/ang/type        cos
+/gate/source/prot/gps/ang/type        beam1d
+/gate/source/prot/gps/ang/sigma_r     0. deg
+/gate/source/prot/gps/pos/type        Beam
+/gate/source/prot/gps/pos/shape       Circle
+/gate/source/prot/gps/pos/centre      0. 0. 70. cm
+/gate/source/prot/gps/pos/radius      3. mm
+/gate/source/prot/gps/pos/sigma_r     0.2 mm
+#/gate/source/prot/gps/visualize 2000 red 5

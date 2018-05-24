@@ -1,0 +1,17 @@
+# POINT SOURCE
+
+/gate/source/addSource point gps
+/gate/source/point/gps/type Point
+/gate/source/point/gps/pos/centre 30. 0. 30. mm
+
+/gate/source/point/gps/setActivity 1000000 Bq
+
+/gate/source/point/gps/setType backtoback
+/gate/source/point/gps/particle gamma
+/gate/source/point/gps/ene/mono 511. keV
+
+/gate/source/point/gps/angtype iso
+
+
+
+

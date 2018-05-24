@@ -1,0 +1,14 @@
+# EASY ONE COMPARTMENT PHANTOM
+
+/gate/world/daughters/name phantom
+/gate/world/daughters/insert box
+/gate/phantom/geometry/setXLength 100. mm
+/gate/phantom/geometry/setYLength 100. mm
+/gate/phantom/geometry/setZLength 400. mm
+/gate/phantom/setMaterial PMMA
+/gate/phantom/vis/setColor white
+/gate/phantom/vis/forceSolid 1
+
+#/gate/phantom/attachPhantomSD
+
+

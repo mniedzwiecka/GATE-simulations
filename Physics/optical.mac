@@ -1,0 +1,11 @@
+#=====================================================
+# PHYSICAL PROCESSES
+#=====================================================
+
+/gate/physics/addProcess OpticalAbsorption
+/gate/physics/addProcess OpticalRayleigh
+/gate/physics/addProcess OpticalBoundary
+/gate/physics/addProcess OpticalMie
+
+
+

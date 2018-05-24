@@ -1,0 +1,14 @@
+/gate/output/root/enable
+/gate/output/root/setFileName             output/protonTest
+
+/gate/output/root/setRootHitFlag 1
+#/gate/output/root/verbose 1
+#/gate/output/root/describe
+
+/gate/output/ascii/enable
+/gate/output/ascii/setFileName             output/protonTest
+
+/gate/output/ascii/setOutFileHitsFlag 1
+#/gate/output/ascii/verbose 1
+#/gate/output/ascii/describe
+	

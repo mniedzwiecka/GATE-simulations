@@ -1,0 +1,33 @@
+# PENCIL BEAM SOURCE
+/gate/source/addSource beam PencilBeam
+/gate/source/beam/gps/particle proton
+
+# ENERGY
+/gate/source/beam/setEnergy 200 MeV
+/gate/source/beam/setSigmaEnergy 0.795776 MeV
+
+# BEAM POSITION
+/gate/source/beam/gps/position 0. 0. -500.0 mm
+
+# BEAM SHAPE (Gaussian assumed)
+/gate/source/beam/setSigmaX 2.8510638297 mm
+/gate/source/beam/setSigmaY 2.8510638297 mm
+
+# DIVERGENCE
+#The beam is also characterized by its divergences: Theta in the XoZ plan and Phi in the YoZ plan.
+#The beam divergence is defined by the standard deviation of the normal probability density function: 
+#/gate/source/beam/setSigmaTheta [divergence_Theta] mrad
+#/gate/source/beam/setSigmaPhi [divergence_Phi] mrad
+
+# EMITTANCE
+#Please note that for emittance, the unit cannot be selected and has to be "mm*mrad". 
+#/gate/source/beam/setEllipseXThetaEmittance [Emittance_X_Theta] mm*mrad
+#/gate/source/beam/setEllipseYPhiEmittance [Emittance_Y_Phi] mm*mrad
+
+# ROTATION NORMALIZATION
+#When defining the beam parameters, one can define the beam convergence or divergence in the two plans (XoZ and YoZ), by setting the "RotationNorm" either to "positive" for a convergent beam or to "negative" for a divergent beam. 
+#/gate/source/beam/setEllipseXThetaRotationNorm positive
+#/gate/source/beam/setEllipseYPhiRotationNorm positive
+
+# BEAM VISULIZATION
+#/gate/source/beam/visualize 2000 red 5

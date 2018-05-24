@@ -1,0 +1,75 @@
+#=====================================================
+# VISUALISATION
+#=====================================================
+
+/vis/disable
+#/vis/enable
+#/control/execute ../Visualisation/visu.mac
+
+#=====================================================
+# VERBOSITY
+#=====================================================
+
+#/control/execute ../Verbose/verbose.mac
+
+#=====================================================
+# MATERIALS
+#=====================================================
+
+/gate/geometry/setMaterialDatabase    GateMaterials.db
+
+#=====================================================
+# GEOMETRY
+#=====================================================
+
+/control/execute ../Geometry/two_strips_250mm_optical_off.mac
+
+#=====================================================
+# PHYSICS
+#=====================================================
+
+/control/execute ../Physics/photons_point_source.mac
+/control/execute ../Physics/photons_point_source_optical.mac
+/gate/physics/processList Enabled
+/gate/physics/processList Initialized
+
+#=====================================================
+# INITIALISATION
+#=====================================================
+
+/gate/run/initialize
+
+#=====================================================
+# SOURCE
+#=====================================================
+
+/control/execute ../Sources/point_isocenter_mono_511keV.mac
+
+#=====================================================
+# PHANTOM
+#=====================================================
+
+#/control/execute ../Phantom/pmma_250mm_center.mac
+
+#=====================================================
+# OUTPUT
+#=====================================================
+
+/control/execute ../Outputs/Output_scanner.mac
+
+#=====================================================
+# RANDOM
+#=====================================================
+
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed 123456789
+#/gate/random/setEngineSeed auto
+#/gate/random/verbose 0
+
+#=====================================================
+# ACQUISITION SETTINGS   
+#=====================================================
+
+/gate/application/setTotalNumberOfPrimaries 1000
+/gate/application/startDAQ
+
