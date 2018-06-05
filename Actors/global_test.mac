@@ -1,0 +1,18 @@
+/gate/actor/addActor LocalActor global_phantom
+/gate/actor/global_phantom/attachTo phantom
+
+/gate/actor/global_phantom/global/saveTo output/global_phantom_crystal.root
+
+/gate/actor/global_phantom/global/enableVolumeName
+/gate/actor/global_phantom/global/enableEventID
+/gate/actor/global_phantom/global/enableTrackID
+/gate/actor/global_phantom/global/enableProcessName
+/gate/actor/global_phantom/global/enableProcessPosition
+/gate/actor/global_phantom/global/enableEmissionPointFromSource
+/gate/actor/global_phantom/global/enableEnergyBeforeProcess
+/gate/actor/global_phantom/global/enableEnergyAfterProcess
+/gate/actor/global_phantom/global/enableEnergyLossDuringProcess
+/gate/actor/global_phantom/global/enableParticlePGDCoding
+
+/gate/actor/addActor LocalActor global_plastic
+/gate/actor/global_plastic/attachTo plastic
