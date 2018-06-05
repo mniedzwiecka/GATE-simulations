@@ -169,7 +169,7 @@
 
 # SINGLE_PANEL in ALL_PANELS
 /gate/single_panel/repeaters/insert cubicArray
-/gate/single_panel/cubicArray/setRepeatNumberX 7
+/gate/single_panel/cubicArray/setRepeatNumberX 13
 /gate/single_panel/cubicArray/setRepeatNumberY 1
 /gate/single_panel/cubicArray/setRepeatNumberZ 1
 /gate/single_panel/cubicArray/setRepeatVector 7. 0. 0. mm
@@ -177,7 +177,7 @@
 # MODULE in the whole ring
 
 /gate/module/repeaters/insert ring
-/gate/module/ring/setRepeatNumber 30
+/gate/module/ring/setRepeatNumber 24
 
 # ATTACHEMENTS
 
@@ -185,7 +185,5 @@
 /gate/systems/scanner/level2/attach single_panel
 /gate/systems/scanner/level3/attach internal_layer
 /gate/systems/scanner/level4/attach plastic
-
-/gate/plastic/attachCrystalSD
 
 
