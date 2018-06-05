@@ -1,0 +1,19 @@
+#JPET actor GenericIon
+/gate/actor/addActor JPETActor jpet_GenericIon
+/gate/actor/jpet_GenericIon/save output/jpet_GenericIon.root
+/gate/actor/jpet_GenericIon/addFilter particleFilter
+/gate/actor/jpet_GenericIon/particleFilter/addParticle GenericIon
+/gate/actor/jpet_GenericIon/attachTo phantom
+/gate/actor/jpet_GenericIon/enableXPosition yes
+/gate/actor/jpet_GenericIon/enableYPosition yes
+/gate/actor/jpet_GenericIon/enableZPosition yes
+/gate/actor/jpet_GenericIon/enableParticleName yes
+/gate/actor/jpet_GenericIon/enableTrackID yes
+/gate/actor/jpet_GenericIon/enableEventID yes
+/gate/actor/jpet_GenericIon/enableParentID yes
+/gate/actor/jpet_GenericIon/enableRunID yes
+/gate/actor/jpet_GenericIon/enableEkin yes
+/gate/actor/jpet_GenericIon/enableInteractionTime yes
+/gate/actor/jpet_GenericIon/enableProcessName yes
+/gate/actor/jpet_GenericIon/enableEmissionPoint yes
+/gate/actor/jpet_GenericIon/enablePrimaryEnergy yes

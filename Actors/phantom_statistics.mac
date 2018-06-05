@@ -1,0 +1,5 @@
+# Statistics for the phantom
+/gate/actor/addActor SimulationStatisticActor simStat
+/gate/actor/simStat/attachTo phantom
+#/gate/actor/simStat/saveEveryNSeconds 1
+/gate/actor/simStat/save output/simulation_statistics.txt

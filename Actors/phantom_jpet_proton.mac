@@ -1,0 +1,19 @@
+#JPET actor proton
+/gate/actor/addActor JPETActor jpet_proton
+/gate/actor/jpet_proton/save output/jpet_proton.root
+/gate/actor/jpet_proton/addFilter particleFilter
+/gate/actor/jpet_proton/particleFilter/addParticle proton
+/gate/actor/jpet_proton/attachTo phantom
+/gate/actor/jpet_proton/enableXPosition yes
+/gate/actor/jpet_proton/enableYPosition yes
+/gate/actor/jpet_proton/enableZPosition yes
+/gate/actor/jpet_proton/enableParticleName yes
+/gate/actor/jpet_proton/enableTrackID yes
+/gate/actor/jpet_proton/enableEventID yes
+/gate/actor/jpet_proton/enableParentID yes
+/gate/actor/jpet_proton/enableRunID yes
+/gate/actor/jpet_proton/enableEkin yes
+/gate/actor/jpet_proton/enableInteractionTime yes
+/gate/actor/jpet_proton/enableProcessName yes
+/gate/actor/jpet_proton/enableEmissionPoint yes
+/gate/actor/jpet_proton/enablePrimaryEnergy yes

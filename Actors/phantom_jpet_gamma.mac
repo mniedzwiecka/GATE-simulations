@@ -1,0 +1,19 @@
+#JPET actor gamma
+/gate/actor/addActor JPETActor jpet_gamma
+/gate/actor/jpet_gamma/save output/jpet_gamma.root
+/gate/actor/jpet_gamma/addFilter particleFilter
+/gate/actor/jpet_gamma/particleFilter/addParticle gamma
+/gate/actor/jpet_gamma/attachTo phantom
+/gate/actor/jpet_gamma/enableXPosition yes
+/gate/actor/jpet_gamma/enableYPosition yes
+/gate/actor/jpet_gamma/enableZPosition yes
+/gate/actor/jpet_gamma/enableParticleName yes
+/gate/actor/jpet_gamma/enableTrackID yes
+/gate/actor/jpet_gamma/enableEventID yes
+/gate/actor/jpet_gamma/enableParentID yes
+/gate/actor/jpet_gamma/enableRunID yes
+/gate/actor/jpet_gamma/enableEkin yes
+/gate/actor/jpet_gamma/enableInteractionTime yes
+/gate/actor/jpet_gamma/enableProcessName yes
+/gate/actor/jpet_gamma/enableEmissionPoint yes
+/gate/actor/jpet_gamma/enablePrimaryEnergy yes

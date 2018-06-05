@@ -1,0 +1,19 @@
+#JPET actor positron
+/gate/actor/addActor JPETActor jpet_positron
+/gate/actor/jpet_positron/save output/jpet_positron.root
+/gate/actor/jpet_positron/addFilter particleFilter
+/gate/actor/jpet_positron/particleFilter/addParticle e+
+/gate/actor/jpet_positron/attachTo phantom
+/gate/actor/jpet_positron/enableXPosition yes
+/gate/actor/jpet_positron/enableYPosition yes
+/gate/actor/jpet_positron/enableZPosition yes
+/gate/actor/jpet_positron/enableParticleName yes
+/gate/actor/jpet_positron/enableTrackID yes
+/gate/actor/jpet_positron/enableEventID yes
+/gate/actor/jpet_positron/enableParentID yes
+/gate/actor/jpet_positron/enableRunID yes
+/gate/actor/jpet_positron/enableEkin yes
+/gate/actor/jpet_positron/enableInteractionTime yes
+/gate/actor/jpet_positron/enableProcessName yes
+/gate/actor/jpet_positron/enableEmissionPoint yes
+/gate/actor/jpet_positron/enablePrimaryEnergy yes

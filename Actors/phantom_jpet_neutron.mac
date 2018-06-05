@@ -1,0 +1,19 @@
+#JPET actor neutron
+/gate/actor/addActor JPETActor jpet_neutron
+/gate/actor/jpet_neutron/save output/jpet_neutron.root
+/gate/actor/jpet_neutron/addFilter particleFilter
+/gate/actor/jpet_neutron/particleFilter/addParticle neutron
+/gate/actor/jpet_neutron/attachTo phantom
+/gate/actor/jpet_neutron/enableXPosition yes
+/gate/actor/jpet_neutron/enableYPosition yes
+/gate/actor/jpet_neutron/enableZPosition yes
+/gate/actor/jpet_neutron/enableParticleName yes
+/gate/actor/jpet_neutron/enableTrackID yes
+/gate/actor/jpet_neutron/enableEventID yes
+/gate/actor/jpet_neutron/enableParentID yes
+/gate/actor/jpet_neutron/enableRunID yes
+/gate/actor/jpet_neutron/enableEkin yes
+/gate/actor/jpet_neutron/enableInteractionTime yes
+/gate/actor/jpet_neutron/enableProcessName yes
+/gate/actor/jpet_neutron/enableEmissionPoint yes
+/gate/actor/jpet_neutron/enablePrimaryEnergy yes

@@ -1,0 +1,17 @@
+# DOSE PHANTOM
+
+/gate/actor/addActor DoseActor dose_phantom
+/gate/actor/dose_phantom/attachTo phantom
+/gate/actor/dose_phantom/stepHitType random
+
+/gate/actor/dose_phantom/setResolution 1 1 400
+
+/gate/actor/dose_phantom/enableEdep true
+#/gate/actor/dose_phantom/enableUncertaintyEdep false
+#/gate/actor/dose_phantom/enableSquaredEdep false
+/gate/actor/dose_phantom/enableDose true
+#/gate/actor/dose_phantom/normaliseDoseToWater false
+#/gate/actor/dose_phantom/normaliseDoseToMax false
+#/gate/actor/dose_phantom/normaliseDoseToIntegral false
+#/gate/actor/dose_phantom/saveEveryNSeconds 60
+/gate/actor/dose_phantom/save output/dose_phantom.txt
