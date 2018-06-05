@@ -1,0 +1,18 @@
+#JPET actor 
+/gate/actor/addActor JPETActor jpet_plastic
+/gate/actor/jpet_plastic/save output/jpet_plastic.root
+/gate/actor/jpet_plastic/attachTo plastic
+/gate/actor/jpet_plastic/enableXPosition yes
+/gate/actor/jpet_plastic/enableYPosition yes
+/gate/actor/jpet_plastic/enableZPosition yes
+/gate/actor/jpet_plastic/enableParticleName yes
+/gate/actor/jpet_plastic/enableTrackID yes
+/gate/actor/jpet_plastic/enableEventID yes
+/gate/actor/jpet_plastic/enableParentID yes
+/gate/actor/jpet_plastic/enableRunID yes
+/gate/actor/jpet_plastic/enableEkin yes
+/gate/actor/jpet_plastic/enableInteractionTime yes
+/gate/actor/jpet_plastic/enableProcessName yes
+/gate/actor/jpet_plastic/enableEmissionPoint yes
+/gate/actor/jpet_plastic/enablePrimaryEnergy yes
+#/gate/actor/jpet_plastic/saveEveryNSeconds 1
