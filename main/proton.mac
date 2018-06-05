@@ -2,9 +2,9 @@
 # VISUALISATION
 #=====================================================
 
-/vis/disable
-#/vis/enable
-#/control/execute ../Visualisation/visu.mac
+#/vis/disable
+/vis/enable
+/control/execute ../Visualisation/visu.mac
 
 #=====================================================
 # VERBOSITY
@@ -23,6 +23,7 @@
 #=====================================================
 
 /control/execute ../Geometry/Modular_JPET.mac
+/gate/plastic/attachCrystalSD
 
 #=====================================================
 # PHANTOM
@@ -35,188 +36,30 @@
 # PHYSICS
 #=====================================================
 
-/gate/physics/addPhysicsList QGSP_BERT_HP_EMY
-
-#/control/execute ../Physics/protonRT_our.mac
-
-/gate/physics/ActivateStepLimiter proton
-/gate/physics/ActivateStepLimiter deuteron
-/gate/physics/ActivateStepLimiter triton
-/gate/physics/ActivateStepLimiter alpha
-/gate/physics/ActivateStepLimiter GenericIon
-
-/gate/physics/Gamma/SetCutInRegion world 1 mm
-/gate/physics/Electron/SetCutInRegion world 1 mm
-/gate/physics/Positron/SetCutInRegion world 1 mm
-
-/gate/physics/SetMaxStepSizeInRegion world 1 mm
-
-/gate/physics/Gamma/SetCutInRegion      phantom 0.1 mm
-/gate/physics/Electron/SetCutInRegion   phantom 0.1 mm
-/gate/physics/Positron/SetCutInRegion   phantom 0.1 mm
-
-#/gate/physics/ActivateStepLimiter proton
-/gate/physics/ActivateStepLimiter e-
-
-/gate/physics/processList Enabled
-/gate/physics/processList Initialized
-
-#/gate/physics/displayCuts
-#/gate/physics/print output/physics.txt
+/control/execute ../Physics/protonRT_our.mac
 
 #=====================================================
 # ACTORS
 #=====================================================
 
 # Statistics for the phantom
-/gate/actor/addActor SimulationStatisticActor simStat
-/gate/actor/simStat/attachTo phantom
-#/gate/actor/simStat/saveEveryNSeconds 1
-/gate/actor/simStat/save output/simulation_statistics.txt
+#/control/execute ../Actors/phantom_statistics.mac
 
 # Dose actor for the phantom
-/gate/actor/addActor DoseActor dose_phantom
-/gate/actor/dose_phantom/attachTo phantom
-/gate/actor/dose_phantom/stepHitType random
-/gate/actor/dose_phantom/setResolution 1 1 400
-/gate/actor/dose_phantom/enableEdep true
-#/gate/actor/dose_phantom/enableUncertaintyEdep false
-#/gate/actor/dose_phantom/enableSquaredEdep false
-/gate/actor/dose_phantom/enableDose true
-#/gate/actor/dose_phantom/normaliseDoseToWater false
-#/gate/actor/dose_phantom/normaliseDoseToMax false
-#/gate/actor/dose_phantom/normaliseDoseToIntegral false
-#/gate/actor/dose_phantom/saveEveryNSeconds 60
-/gate/actor/dose_phantom/save output/dose_phantom.txt
+#/control/execute ../Actors/phantom_dose.mac
 
 #Secondary particles production actor
-/gate/actor/addActor SecondaryProductionActor secondary
-/gate/actor/secondary/attachTo phantom
-/gate/actor/secondary/save output/secondary.root
+#/control/execute ../Actors/phantom_secondary.mac
 
-#Global Actor from JPET group
-#/gate/actor/addActor LocalActor glob
-#/gate/actor/glob/global/saveTo output/glob.root
-#/gate/actor/glob/global/enableEnergyLossDuringProcess
+#JPET actors
+#/control/execute ../Actors/phantom_jpet_gamma.mac
+#/control/execute ../Actors/phantom_jpet_neutron.mac
+#/control/execute ../Actors/phantom_jpet_proton.mac
+#/control/execute ../Actors/phantom_jpet_genericion.mac
+#/control/execute ../Actors/phantom_jpet_positron.mac
+#/control/execute ../Actors/phantom_jpet.mac
 
-#JPET actor proton
-/gate/actor/addActor JPETActor jpet_proton
-/gate/actor/jpet_proton/save output/jpet_proton.root
-/gate/actor/jpet_proton/addFilter particleFilter
-/gate/actor/jpet_proton/particleFilter/addParticle proton
-/gate/actor/jpet_proton/attachTo phantom
-/gate/actor/jpet_proton/enableXPosition yes
-/gate/actor/jpet_proton/enableYPosition yes
-/gate/actor/jpet_proton/enableZPosition yes
-/gate/actor/jpet_proton/enableParticleName yes
-/gate/actor/jpet_proton/enableTrackID yes
-/gate/actor/jpet_proton/enableEventID yes
-/gate/actor/jpet_proton/enableParentID yes
-/gate/actor/jpet_proton/enableRunID yes
-/gate/actor/jpet_proton/enableEkin yes
-/gate/actor/jpet_proton/enableInteractionTime yes
-/gate/actor/jpet_proton/enableProcessName yes
-/gate/actor/jpet_proton/enableEmissionPoint yes
-/gate/actor/jpet_proton/enablePrimaryEnergy yes
-
-#JPET actor neutron
-/gate/actor/addActor JPETActor jpet_neutron
-/gate/actor/jpet_neutron/save output/jpet_neutron.root
-/gate/actor/jpet_neutron/addFilter particleFilter
-/gate/actor/jpet_neutron/particleFilter/addParticle neutron
-/gate/actor/jpet_neutron/attachTo phantom
-/gate/actor/jpet_neutron/enableXPosition yes
-/gate/actor/jpet_neutron/enableYPosition yes
-/gate/actor/jpet_neutron/enableZPosition yes
-/gate/actor/jpet_neutron/enableParticleName yes
-/gate/actor/jpet_neutron/enableTrackID yes
-/gate/actor/jpet_neutron/enableEventID yes
-/gate/actor/jpet_neutron/enableParentID yes
-/gate/actor/jpet_neutron/enableRunID yes
-/gate/actor/jpet_neutron/enableEkin yes
-/gate/actor/jpet_neutron/enableInteractionTime yes
-/gate/actor/jpet_neutron/enableProcessName yes
-/gate/actor/jpet_neutron/enableEmissionPoint yes
-/gate/actor/jpet_neutron/enablePrimaryEnergy yes
-
-#JPET actor gamma
-/gate/actor/addActor JPETActor jpet_gamma
-/gate/actor/jpet_gamma/save output/jpet_gamma.root
-/gate/actor/jpet_gamma/addFilter particleFilter
-/gate/actor/jpet_gamma/particleFilter/addParticle gamma
-/gate/actor/jpet_gamma/attachTo phantom
-/gate/actor/jpet_gamma/enableXPosition yes
-/gate/actor/jpet_gamma/enableYPosition yes
-/gate/actor/jpet_gamma/enableZPosition yes
-/gate/actor/jpet_gamma/enableParticleName yes
-/gate/actor/jpet_gamma/enableTrackID yes
-/gate/actor/jpet_gamma/enableEventID yes
-/gate/actor/jpet_gamma/enableParentID yes
-/gate/actor/jpet_gamma/enableRunID yes
-/gate/actor/jpet_gamma/enableEkin yes
-/gate/actor/jpet_gamma/enableInteractionTime yes
-/gate/actor/jpet_gamma/enableProcessName yes
-/gate/actor/jpet_gamma/enableEmissionPoint yes
-/gate/actor/jpet_gamma/enablePrimaryEnergy yes
-
-#JPET actor GenericIon
-/gate/actor/addActor JPETActor jpet_GenericIon
-/gate/actor/jpet_GenericIon/save output/jpet_GenericIon.root
-/gate/actor/jpet_GenericIon/addFilter particleFilter
-/gate/actor/jpet_GenericIon/particleFilter/addParticle GenericIon
-/gate/actor/jpet_GenericIon/attachTo phantom
-/gate/actor/jpet_GenericIon/enableXPosition yes
-/gate/actor/jpet_GenericIon/enableYPosition yes
-/gate/actor/jpet_GenericIon/enableZPosition yes
-/gate/actor/jpet_GenericIon/enableParticleName yes
-/gate/actor/jpet_GenericIon/enableTrackID yes
-/gate/actor/jpet_GenericIon/enableEventID yes
-/gate/actor/jpet_GenericIon/enableParentID yes
-/gate/actor/jpet_GenericIon/enableRunID yes
-/gate/actor/jpet_GenericIon/enableEkin yes
-/gate/actor/jpet_GenericIon/enableInteractionTime yes
-/gate/actor/jpet_GenericIon/enableProcessName yes
-/gate/actor/jpet_GenericIon/enableEmissionPoint yes
-/gate/actor/jpet_GenericIon/enablePrimaryEnergy yes
-
-#JPET actor positron
-/gate/actor/addActor JPETActor jpet_positron
-/gate/actor/jpet_positron/save output/jpet_positron.root
-/gate/actor/jpet_positron/addFilter particleFilter
-/gate/actor/jpet_positron/particleFilter/addParticle e+
-/gate/actor/jpet_positron/attachTo phantom
-/gate/actor/jpet_positron/enableXPosition yes
-/gate/actor/jpet_positron/enableYPosition yes
-/gate/actor/jpet_positron/enableZPosition yes
-/gate/actor/jpet_positron/enableParticleName yes
-/gate/actor/jpet_positron/enableTrackID yes
-/gate/actor/jpet_positron/enableEventID yes
-/gate/actor/jpet_positron/enableParentID yes
-/gate/actor/jpet_positron/enableRunID yes
-/gate/actor/jpet_positron/enableEkin yes
-/gate/actor/jpet_positron/enableInteractionTime yes
-/gate/actor/jpet_positron/enableProcessName yes
-/gate/actor/jpet_positron/enableEmissionPoint yes
-/gate/actor/jpet_positron/enablePrimaryEnergy yes
-
-#JPET actor
-/gate/actor/addActor JPETActor jpet
-/gate/actor/jpet/save output/jpet_phantom.root
-/gate/actor/jpet/attachTo phantom
-/gate/actor/jpet/enableXPosition yes
-/gate/actor/jpet/enableYPosition yes
-/gate/actor/jpet/enableZPosition yes
-/gate/actor/jpet/enableParticleName yes
-/gate/actor/jpet/enableTrackID yes
-/gate/actor/jpet/enableEventID yes
-/gate/actor/jpet/enableParentID yes
-/gate/actor/jpet/enableRunID yes
-/gate/actor/jpet/enableEkin yes
-/gate/actor/jpet/enableInteractionTime yes
-/gate/actor/jpet/enableProcessName yes
-/gate/actor/jpet/enableEmissionPoint yes
-/gate/actor/jpet/enablePrimaryEnergy yes
-/gate/actor/jpet/saveEveryNSeconds 1
+#JPET global actor
 
 #=====================================================
 # INITIALISATION
@@ -230,9 +73,7 @@
 # SOURCE
 #=====================================================
 
-#/control/execute ../Sources/proton_beam_200MeV.mac
 /control/execute ../Sources/proton_beam_test.mac
-#/control/execute ../Sources/point_z_mono_511keV.mac
 
 #=====================================================
 # OUTPUT
@@ -253,6 +94,5 @@
 # ACQUISITION SETTINGS   
 #=====================================================
 
-/gate/application/setTotalNumberOfPrimaries 10000
+/gate/application/setTotalNumberOfPrimaries 1000
 /gate/application/startDAQ
-
