@@ -2,9 +2,9 @@
 # VISUALISATION
 #=====================================================
 
-#/vis/disable
-/vis/enable
-/control/execute ../Visualisation/visu.mac
+/vis/disable
+#/vis/enable
+#/control/execute ../Visualisation/visu.mac
 
 #=====================================================
 # VERBOSITY
@@ -43,10 +43,10 @@
 #=====================================================
 
 # Statistics for the phantom
-#/control/execute ../Actors/phantom_statistics.mac
+/control/execute ../Actors/phantom_statistics.mac
 
 # Dose actor for the phantom
-#/control/execute ../Actors/phantom_dose.mac
+/control/execute ../Actors/phantom_dose.mac
 
 #Secondary particles production actor
 #/control/execute ../Actors/phantom_secondary.mac
@@ -57,9 +57,12 @@
 #/control/execute ../Actors/phantom_jpet_proton.mac
 #/control/execute ../Actors/phantom_jpet_genericion.mac
 #/control/execute ../Actors/phantom_jpet_positron.mac
-#/control/execute ../Actors/phantom_jpet.mac
+/control/execute ../Actors/phantom_jpet.mac
+/control/execute ../Actors/plastic_jpet.mac
 
-#JPET global actor
+
+#JPET global actors
+/control/execute ../Actors/global_test.mac
 
 #=====================================================
 # INITIALISATION
@@ -94,5 +97,5 @@
 # ACQUISITION SETTINGS   
 #=====================================================
 
-/gate/application/setTotalNumberOfPrimaries 1000
+/gate/application/setTotalNumberOfPrimaries 100000
 /gate/application/startDAQ

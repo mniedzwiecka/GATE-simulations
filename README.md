@@ -12,5 +12,6 @@ Software used for the simulation:
 
 **ADDITIONAL ACTORS**
 
-Additional actors were compiled and installed with the software from the [BlurredChoise](https://github.com/BlurredChoise) repository.
+Additional actors were compiled and installed from the [BlurredChoise](https://github.com/BlurredChoise) repository.
+
 For the additional information please contact myself.
