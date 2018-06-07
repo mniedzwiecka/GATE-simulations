@@ -19,6 +19,9 @@
 #/gate/physics/ActivateStepLimiter proton
 #/gate/physics/ActivateStepLimiter e-
 
+/gate/physics/addProcess Decay
+/gate/physics/addProcess RadioactiveDecay
+
 /gate/physics/processList Enabled
 /gate/physics/processList Initialized
 
