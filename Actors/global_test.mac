@@ -13,6 +13,7 @@
 /gate/actor/global_phantom/global/enableEnergyAfterProcess
 /gate/actor/global_phantom/global/enableEnergyLossDuringProcess
 /gate/actor/global_phantom/global/enableParticlePGDCoding
+/gate/actor/global_phantom/global/enableParticleName
 
 /gate/actor/addActor LocalActor global_plastic
 /gate/actor/global_plastic/attachTo plastic
