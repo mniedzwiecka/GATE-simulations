@@ -1,0 +1,10 @@
+/gate/actor/addActor ProductionAndStoppingActor    betaNucleiMap
+/gate/actor/betaNucleiMap/save                         output/beta_nuclei.mhd
+/gate/actor/betaNucleiMap/attachTo                     phantom
+/gate/actor/betaNucleiMap/stepHitType                  random
+/gate/actor/betaNucleiMap/setVoxelSize                 1 1 1 mm
+/gate/actor/betaNucleiMap/addFilter                    particleFilter
+/gate/actor/betaNucleiMap/particleFilter/addParticle   C11
+/gate/actor/betaNucleiMap/particleFilter/addParticle   N13
+/gate/actor/betaNucleiMap/particleFilter/addParticle   O15
+#/gate/actor/betaNucleiMap/saveEveryNSeconds 20
