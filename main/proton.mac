@@ -43,13 +43,16 @@
 #=====================================================
 
 # Statistics for the phantom
-/control/execute ../Actors/phantom_statistics.mac
+#/control/execute ../Actors/phantom_statistics.mac
 
 # Dose actor for the phantom
-/control/execute ../Actors/phantom_dose.mac
+#/control/execute ../Actors/phantom_dose.mac
 
 #Secondary particles production actor
 #/control/execute ../Actors/phantom_secondary.mac
+
+#Production and stopping actor
+#/control/execute ../Actors/prod_actor.mac
 
 #JPET actors
 #/control/execute ../Actors/phantom_jpet_gamma.mac
@@ -57,8 +60,8 @@
 #/control/execute ../Actors/phantom_jpet_proton.mac
 #/control/execute ../Actors/phantom_jpet_genericion.mac
 #/control/execute ../Actors/phantom_jpet_positron.mac
-/control/execute ../Actors/phantom_jpet.mac
-/control/execute ../Actors/plastic_jpet.mac
+#/control/execute ../Actors/phantom_jpet.mac
+#/control/execute ../Actors/plastic_jpet.mac
 
 
 #JPET global actors
@@ -77,6 +80,7 @@
 #=====================================================
 
 /control/execute ../Sources/proton_beam_test.mac
+#/control/execute ../Sources/point_c_11.mac
 
 #=====================================================
 # OUTPUT
@@ -98,4 +102,6 @@
 #=====================================================
 
 /gate/application/setTotalNumberOfPrimaries 100000
+/gate/application/setTimeStart 0. s
+/gate/application/setTimeStop 50. s
 /gate/application/startDAQ
