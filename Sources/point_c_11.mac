@@ -1,0 +1,9 @@
+/gate/source/addSource C11
+/gate/source/C11/setActivity 10 kBq
+/gate/source/C11/gps/particle ion
+/gate/source/C11/gps/ion 8 15 0 0
+/gate/source/C11/gps/energytype Mono
+/gate/source/C11/gps/energy 50 MeV
+/gate/source/C11/gps/type Point
+/gate/source/C11/gps/centre 0. 0. 0. cm
+/gate/source/C11/gps/angtype iso
