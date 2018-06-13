@@ -37,24 +37,27 @@
 #=====================================================
 
 /control/execute ../Physics/protonRT_our.mac
+#/control/execute ../Physics/protonRT.mac
 
 #=====================================================
 # ACTORS
 #=====================================================
 
 # Statistics for the phantom
-#/control/execute ../Actors/phantom_statistics.mac
+/control/execute ../Actors/phantom_statistics.mac
 
 # Dose actor for the phantom
 #/control/execute ../Actors/phantom_dose.mac
 
-#Secondary particles production actor
+# Secondary particles production actor
 #/control/execute ../Actors/phantom_secondary.mac
 
-#Production and stopping actor
-#/control/execute ../Actors/prod_actor.mac
+# Production and stopping actor
+/control/execute ../Actors/prod_C11.mac
+/control/execute ../Actors/prod_N13.mac
+/control/execute ../Actors/prod_O15.mac
 
-#JPET actors
+# JPET actors
 #/control/execute ../Actors/phantom_jpet_gamma.mac
 #/control/execute ../Actors/phantom_jpet_neutron.mac
 #/control/execute ../Actors/phantom_jpet_proton.mac
@@ -63,8 +66,7 @@
 #/control/execute ../Actors/phantom_jpet.mac
 #/control/execute ../Actors/plastic_jpet.mac
 
-
-#JPET global actors
+# JPET global actors
 /control/execute ../Actors/global_test.mac
 
 #=====================================================
@@ -95,13 +97,14 @@
 /gate/random/setEngineName MersenneTwister
 /gate/random/setEngineSeed 123456789
 #/gate/random/setEngineSeed auto
-#/gate/random/verbose 1
 
 #=====================================================
 # ACQUISITION SETTINGS   
 #=====================================================
 
-/gate/application/setTotalNumberOfPrimaries 100000
+#/tracking/verbose 2
+
+/gate/application/setTotalNumberOfPrimaries 10000
 /gate/application/setTimeStart 0. s
-/gate/application/setTimeStop 50. s
+/gate/application/setTimeStop 1000. s
 /gate/application/startDAQ
