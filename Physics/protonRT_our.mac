@@ -1,10 +1,17 @@
-/gate/physics/addPhysicsList QGSP_BERT_HP_EMY
+/gate/physics/addPhysicsList QGSP_BERT_HP_EMV
+#/gate/physics/addPhysicsList RadioactiveDecay
+
+
+#QGSP_BIC_HP
+#QGSP_BERT_HP_EMZ
+#emstandard_opt3
 
 /gate/physics/ActivateStepLimiter proton
 /gate/physics/ActivateStepLimiter deuteron
 /gate/physics/ActivateStepLimiter triton
 /gate/physics/ActivateStepLimiter alpha
 /gate/physics/ActivateStepLimiter GenericIon
+/gate/physics/ActivateStepLimiter e-
 
 /gate/physics/Gamma/SetCutInRegion world 1 mm
 /gate/physics/Electron/SetCutInRegion world 1 mm
@@ -16,22 +23,11 @@
 /gate/physics/Electron/SetCutInRegion   phantom 0.1 mm
 /gate/physics/Positron/SetCutInRegion   phantom 0.1 mm
 
-
-/gate/physics/SetMaxStepSizeInRegion world 1 mm
-/gate/physics/ActivateStepLimiter proton
-/gate/physics/ActivateStepLimiter deuteron
-/gate/physics/ActivateStepLimiter triton
-/gate/physics/ActivateStepLimiter alpha
-/gate/physics/ActivateStepLimiter GenericIon
-
-/gate/physics/ActivateStepLimiter proton
-/gate/physics/ActivateStepLimiter e-
-
-/gate/physics/addProcess Decay
+#/gate/physics/addProcess Decay
 /gate/physics/addProcess RadioactiveDecay
 
 /gate/physics/processList Enabled
 /gate/physics/processList Initialized
 
-#/gate/physics/displayCuts
+/gate/physics/displayCuts
 /gate/physics/print output/physics.txt

@@ -116,18 +116,18 @@
 /gate/physics/processes/NeutronInelastic/setDataSet G4NeutronInelasticCrossSection neutron
 
 /gate/physics/addProcess Decay
-#/gate/physics/addProcess RadioactiveDecay
+/gate/physics/addProcess RadioactiveDecay
 
 #=====================================
 # Options
 #=====================================
 /gate/physics/setEMin 0.1 keV
 /gate/physics/setEMax 10 TeV
-/gate/physics/setDEDXBinning 220
-/gate/physics/setLambdaBinning 220
-/gate/physics/Gamma/SetCutInRegion world 0.1 mm
-/gate/physics/Electron/SetCutInRegion world 0.1 mm
-/gate/physics/Positron/SetCutInRegion world 0.1 mm
+#/gate/physics/setDEDXBinning 220
+#/gate/physics/setLambdaBinning 220
+#/gate/physics/Gamma/SetCutInRegion world 0.1 mm
+#/gate/physics/Electron/SetCutInRegion world 0.1 mm
+#/gate/physics/Positron/SetCutInRegion world 0.1 mm
 
 
 
