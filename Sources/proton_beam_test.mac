@@ -2,8 +2,8 @@
 
 /gate/source/addSource beam PencilBeam
 /gate/source/beam/setParticleType proton
-/gate/source/beam/setEnergy 100 MeV
-/gate/source/beam/setSigmaEnergy .3 MeV
+/gate/source/beam/setEnergy 150 MeV
+/gate/source/beam/setSigmaEnergy .5 MeV
 /gate/source/beam/setPosition 0. 0. -700.0 mm
 /gate/source/beam/setSigmaX 2 mm
 /gate/source/beam/setSigmaY 4 mm
