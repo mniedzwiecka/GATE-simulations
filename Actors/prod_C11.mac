@@ -1,0 +1,9 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaC11
+/gate/actor/betaC11/save                         output/C11_map.txt
+/gate/actor/betaC11/attachTo                     phantom
+/gate/actor/betaC11/stepHitType                  post
+/gate/actor/betaC11/setVoxelSize                 1 1 1 mm
+/gate/actor/betaC11/addFilter                    particleFilter
+/gate/actor/betaC11/particleFilter/addParticle   C11
+#/gate/actor/betaC11/particleFilter/addParticle   N13
+#/gate/actor/betaC11/particleFilter/addParticle   O15

@@ -1,0 +1,9 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaO15
+/gate/actor/betaO15/save                         output/O15_map.txt
+/gate/actor/betaO15/attachTo                     phantom
+/gate/actor/betaO15/stepHitType                  post
+/gate/actor/betaO15/setVoxelSize                 1 1 1 mm
+/gate/actor/betaO15/addFilter                    particleFilter
+#/gate/actor/betaO15/particleFilter/addParticle   C11
+#/gate/actor/betaO15/particleFilter/addParticle   N13
+/gate/actor/betaO15/particleFilter/addParticle   O15
