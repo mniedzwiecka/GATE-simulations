@@ -1,0 +1,28 @@
+# O15 map from the proton beam simulation
+
+# ALWAYS USE THE KEYWORD voxel TO DECLARE THE TYPE
+/gate/source/addSource						o_15 voxel
+
+# DECLARATION THAT THE VOXELIZED SOURCE WILL BE ENTERED USING IMAGE DATA
+/gate/source/o_15/reader/insert				image
+
+# INSERT THE TRANSLATOR THAT WILL CONVERT THE IMAGE FROM DIGITAL VALUES TO ACTIVITY VALUES 
+/gate/source/o_15/imageReader/translator/insert              linear
+/gate/source/o_15/imageReader/linearTranslator/setScale      1. Bq
+
+# THE FOLLOWING LINE ALLOWS YOU TO INSERT THE IMAGE DATA USING THE APPROPRIATE EXTENSION FILE
+/gate/source/o_15/imageReader/readFile                       output_4M/O15_map-Stop.txt 
+/gate/source/o_15/imageReader/verbose                        1
+
+ # SO THE VOXELIZED SOURCE HAS TO BE SHIFTED OVER HALF ITS DIMENSION IN THE NEGATIVE DIRECTION ON EACH AXIS  
+/gate/source/o_15/setPosition                                -50. -50. -200. mm 
+/gate/source/o_15/dump                                       1 
+ 
+ # THE FOLLOWING LINES CHARACTERIZE THE SIZE (NO DIFFERENCE WITH AN ANALYTICAL SOURCE)
+/gate/source/o_15/gps/particle ion
+/gate/source/o_15/gps/ion 8 15 0 0 
+/gate/source/o_15/setForcedUnstableFlag true
+/gate/source/o_15/useDefaultHalfLife
+/gate/source/o_15/gps/angtype iso 
+ 
+ 
