@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaC10
+/gate/actor/betaC10/save                         output/C10_map.txt
+/gate/actor/betaC10/attachTo                     phantom
+/gate/actor/betaC10/stepHitType                  post
+/gate/actor/betaC10/setVoxelSize                 1 1 1 mm
+/gate/actor/betaC10/addFilter                    particleFilter
+/gate/actor/betaC10/particleFilter/addParticle   C10

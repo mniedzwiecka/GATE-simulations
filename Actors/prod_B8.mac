@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaB8
+/gate/actor/betaB8/save                         output/B8_map.txt
+/gate/actor/betaB8/attachTo                     phantom
+/gate/actor/betaB8/stepHitType                  post
+/gate/actor/betaB8/setVoxelSize                 1 1 1 mm
+/gate/actor/betaB8/addFilter                    particleFilter
+/gate/actor/betaB8/particleFilter/addParticle   B8

@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaO13
+/gate/actor/betaO13/save                         output/O13_map.txt
+/gate/actor/betaO13/attachTo                     phantom
+/gate/actor/betaO13/stepHitType                  post
+/gate/actor/betaO13/setVoxelSize                 1 1 1 mm
+/gate/actor/betaO13/addFilter                    particleFilter
+/gate/actor/betaO13/particleFilter/addParticle   O13

@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaP30
+/gate/actor/betaP30/save                         output/P30_map.txt
+/gate/actor/betaP30/attachTo                     phantom
+/gate/actor/betaP30/stepHitType                  post
+/gate/actor/betaP30/setVoxelSize                 1 1 1 mm
+/gate/actor/betaP30/addFilter                    particleFilter
+/gate/actor/betaP30/particleFilter/addParticle   P30

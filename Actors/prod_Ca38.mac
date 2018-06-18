@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaCa38
+/gate/actor/betaCa38/save                         output/Ca38_map.txt
+/gate/actor/betaCa38/attachTo                     phantom
+/gate/actor/betaCa38/stepHitType                  post
+/gate/actor/betaCa38/setVoxelSize                 1 1 1 mm
+/gate/actor/betaCa38/addFilter                    particleFilter
+/gate/actor/betaCa38/particleFilter/addParticle   Ca38

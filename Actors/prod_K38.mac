@@ -1,0 +1,8 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaK38
+/gate/actor/betaK38/save                         output/K38_map.txt
+/gate/actor/betaK38/attachTo                     phantom
+/gate/actor/betaK38/stepHitType                  post
+/gate/actor/betaK38/setVoxelSize                 1 1 1 mm
+/gate/actor/betaK38/addFilter                    particleFilter
+/gate/actor/betaK38/particleFilter/addParticle   K38
+

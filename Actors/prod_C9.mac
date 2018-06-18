@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaC9
+/gate/actor/betaC9/save                         output/C9_map.txt
+/gate/actor/betaC9/attachTo                     phantom
+/gate/actor/betaC9/stepHitType                  post
+/gate/actor/betaC9/setVoxelSize                 1 1 1 mm
+/gate/actor/betaC9/addFilter                    particleFilter
+/gate/actor/betaC9/particleFilter/addParticle   C9

@@ -1,0 +1,7 @@
+/gate/actor/addActor ProductionAndStoppingActor  betaP29
+/gate/actor/betaP29/save                         output/P29_map.txt
+/gate/actor/betaP29/attachTo                     phantom
+/gate/actor/betaP29/stepHitType                  post
+/gate/actor/betaP29/setVoxelSize                 1 1 1 mm
+/gate/actor/betaP29/addFilter                    particleFilter
+/gate/actor/betaP29/particleFilter/addParticle   P29
