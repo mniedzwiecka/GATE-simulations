@@ -70,7 +70,7 @@
 /control/execute ../Sources/o_15_proton_beam.mac
 
 /control/execute ../Sources/p_29_proton_beam.mac
-/control/execute ../Sources/p_30_proton_beam.mac
+/control/execute ../Sources/p_29_proton_beam.mac
 
 /control/execute ../Sources/s_30_proton_beam.mac
 /control/execute ../Sources/s_31_proton_beam.mac
@@ -80,6 +80,7 @@
 
 /control/execute ../Sources/ca_38_proton_beam.mac
 /control/execute ../Sources/ca_39_proton_beam.mac
+
 
 #/control/execute ../Sources/point_c_11.mac
 
@@ -103,7 +104,7 @@
 
 #/tracking/verbose 2
 
-#/gate/application/setTotalNumberOfPrimaries 3
+#/gate/application/setTotalNumberOfPrimaries 1000000
 /gate/application/setTimeStart 0. s
 /gate/application/setTimeStop 1000. s
 /gate/application/startDAQ
