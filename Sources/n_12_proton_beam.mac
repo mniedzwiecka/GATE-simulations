@@ -1,0 +1,28 @@
+# C11 map from the proton beam simulation
+
+# ALWAYS USE THE KEYWORD voxel TO DECLARE THE TYPE
+/gate/source/addSource						n_12 voxel
+
+# DECLARATION THAT THE VOXELIZED SOURCE WILL BE ENTERED USING IMAGE DATA
+/gate/source/n_12/reader/insert				image
+
+# INSERT THE TRANSLATOR THAT WILL CONVERT THE IMAGE FROM DIGITAL VALUES TO ACTIVITY VALUES 
+/gate/source/n_12/imageReader/translator/insert              linear
+/gate/source/n_12/imageReader/linearTranslator/setScale      1. Bq
+
+# THE FOLLOWING LINE ALLOWS YOU TO INSERT THE IMAGE DATA USING THE APPROPRIATE EXTENSION FILE
+/gate/source/n_12/imageReader/readFile                       output/N12_map-Stop.txt 
+/gate/source/n_12/imageReader/verbose                        1
+
+ # SO THE VOXELIZED SOURCE HAS TO BE SHIFTED OVER HALF ITS DIMENSION IN THE NEGATIVE DIRECTION ON EACH AXIS  
+/gate/source/n_12/setPosition                                -50. -50. -200. mm 
+/gate/source/n_12/dump                                       1 
+ 
+ # THE FOLLOWING LINES CHARACTERIZE THE SIZE (NO DIFFERENCE WITH AN ANALYTICAL SOURCE)
+/gate/source/n_12/gps/particle ion
+/gate/source/n_12/gps/ion 7 12 0 0 
+/gate/source/n_12/setForcedUnstableFlag true
+/gate/source/n_12/useDefaultHalfLife
+/gate/source/n_12/gps/angtype iso 
+ 
+ 

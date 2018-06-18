@@ -11,7 +11,7 @@
 /gate/source/o_15/imageReader/linearTranslator/setScale      1. Bq
 
 # THE FOLLOWING LINE ALLOWS YOU TO INSERT THE IMAGE DATA USING THE APPROPRIATE EXTENSION FILE
-/gate/source/o_15/imageReader/readFile                       output_4M/O15_map-Stop.txt 
+/gate/source/o_15/imageReader/readFile                       output/O15_map-Stop.txt 
 /gate/source/o_15/imageReader/verbose                        1
 
  # SO THE VOXELIZED SOURCE HAS TO BE SHIFTED OVER HALF ITS DIMENSION IN THE NEGATIVE DIRECTION ON EACH AXIS  
