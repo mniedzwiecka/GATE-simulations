@@ -56,9 +56,30 @@
 # SOURCE
 #=====================================================
 
+/control/execute ../Sources/b_8_proton_beam.mac
+
+/control/execute ../Sources/c_9_proton_beam.mac
+/control/execute ../Sources/c_10_proton_beam.mac
 /control/execute ../Sources/c_11_proton_beam.mac
+
+/control/execute ../Sources/n_12_proton_beam.mac
 /control/execute ../Sources/n_13_proton_beam.mac
+
+/control/execute ../Sources/o_13_proton_beam.mac
+/control/execute ../Sources/o_14_proton_beam.mac
 /control/execute ../Sources/o_15_proton_beam.mac
+
+/control/execute ../Sources/p_29_proton_beam.mac
+/control/execute ../Sources/p_30_proton_beam.mac
+
+/control/execute ../Sources/s_30_proton_beam.mac
+/control/execute ../Sources/s_31_proton_beam.mac
+
+/control/execute ../Sources/k_37_proton_beam.mac
+/control/execute ../Sources/k_38_proton_beam.mac
+
+/control/execute ../Sources/ca_38_proton_beam.mac
+/control/execute ../Sources/ca_39_proton_beam.mac
 
 #/control/execute ../Sources/point_c_11.mac
 

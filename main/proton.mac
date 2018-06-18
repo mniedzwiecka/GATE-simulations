@@ -53,9 +53,30 @@
 #/control/execute ../Actors/phantom_secondary.mac
 
 # Production and stopping actor
+/control/execute ../Actors/prod_B8.mac
+
+/control/execute ../Actors/prod_C9.mac
+/control/execute ../Actors/prod_C10.mac
 /control/execute ../Actors/prod_C11.mac
+
+/control/execute ../Actors/prod_N12.mac
 /control/execute ../Actors/prod_N13.mac
+
+/control/execute ../Actors/prod_O13.mac
+/control/execute ../Actors/prod_O14.mac
 /control/execute ../Actors/prod_O15.mac
+
+/control/execute ../Actors/prod_P29.mac
+/control/execute ../Actors/prod_P30.mac
+
+/control/execute ../Actors/prod_S30.mac
+/control/execute ../Actors/prod_S31.mac
+
+/control/execute ../Actors/prod_K37.mac
+/control/execute ../Actors/prod_K38.mac
+
+/control/execute ../Actors/prod_Ca38.mac
+/control/execute ../Actors/prod_Ca39.mac
 
 # JPET actors
 #/control/execute ../Actors/phantom_jpet_gamma.mac
@@ -67,7 +88,7 @@
 #/control/execute ../Actors/plastic_jpet.mac
 
 # JPET global actors
-#/control/execute ../Actors/global_test.mac
+/control/execute ../Actors/global_test.mac
 
 #=====================================================
 # INITIALISATION
@@ -103,7 +124,7 @@
 
 #/tracking/verbose 2
 
-/gate/application/setTotalNumberOfPrimaries 100000
+/gate/application/setTotalNumberOfPrimaries 10000
 /gate/application/setTimeStart 0. s
 /gate/application/setTimeStop 1000. s
 /gate/application/startDAQ
