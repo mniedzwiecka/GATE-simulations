@@ -15,6 +15,7 @@
 #include <iostream>
 #include "GlobalActorReader.hh"
 #include <stdexcept>
+#include <fstream>
 using namespace std;
 
 /**
@@ -28,6 +29,9 @@ int main(int argc, char *argv[])
     }
     else
     {
+      std::ofstream outputFile;
+      outputFile.open("ParticleStream.txt");
+      
         std::string file_name(argv[1]);
 
         try
@@ -38,16 +42,22 @@ int main(int argc, char *argv[])
                 {
                     //Your code
 		  
-		  //if(gar.GetParticleName() == "O15")        // annihilation abbreviation is "annihil"; Decay
-                       //{
-                         //  std::cout << "Particle PGD Coding: " << gar.GetParticlePGDCoding() << std::endl;
-                           std::cout << "Particle Name: " << gar.GetParticleName() << std::endl;
-                           std::cout << "Event ID: " << gar.GetEventID() << std::endl;
-                           std::cout << "Track ID: " << gar.GetTrackID() << std::endl;
-                           std::cout << "Process Name: " << gar.GetProcessName() << std::endl;
-                           //std::cout << "Energy loss: " << gar.GetEnergyLossDuringProcess() << " keV" << std::endl;
+// 		  if(gar.GetParticleName() == "O15")        // annihilation abbreviation is "annihil"; Decay
+//                        {
+//                            std::cout << "Particle PGD Coding: " << gar.GetParticlePGDCoding() << std::endl;
+//                            std::cout << "Particle Name: " << gar.GetParticleName() << std::endl;
+//                            std::cout << "Event ID: " << gar.GetEventID() << std::endl;
+//                            std::cout << "Track ID: " << gar.GetTrackID() << std::endl;
+//                            std::cout << "Process Name: " << gar.GetProcessName() << std::endl;
+//                            //std::cout << "Energy loss: " << gar.GetEnergyLossDuringProcess() << " keV" << std::endl;
+//                            //std::cout << "Volume Name: " << gar.GetVolumeName() << std::endl;
+//                        }
+                       
+                       
+                          // std::cout << "Particle PGD Coding: " << gar.GetParticlePGDCoding() << std::endl;
+                           outputFile << gar.GetParticleName() << "\t" << gar.GetParentID() << "\t" << gar.GetTrackID() << "\t" << gar.GetProcessName() << "\t" << gar.GetEnergyLossDuringProcess() << std::endl;
                            //std::cout << "Volume Name: " << gar.GetVolumeName() << std::endl;
-                      // }
+                       
                 }
             else
                 std::cerr<<"Loading file failed."<<std::endl;
@@ -60,6 +70,7 @@ int main(int argc, char *argv[])
         {
             std::cerr<<"Udefined exception"<<std::endl;
         }
+        outputFile.close();
     }
     return 0;
 }

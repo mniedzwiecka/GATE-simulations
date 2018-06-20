@@ -1,0 +1,575 @@
+<!> *** Warning *** <!>  Processes not yet initialized!
+
+List of particles with their associated processes
+
+<!> *** Warning *** <!>  Processes not yet initialized!
+
+  * B+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * B-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * B0
+    - UserSpecialCut
+  * Bc+
+    - StepLimiter
+    - UserSpecialCut
+  * Bc-
+    - StepLimiter
+    - UserSpecialCut
+  * Bs0
+    - UserSpecialCut
+  * D+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * D-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * D0
+    - UserSpecialCut
+  * Ds+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * Ds-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * GenericIon
+    - msc
+    - ionIoni
+    - nuclearStopping
+    - ionInelastic
+    - RadioactiveDecay
+    - StepLimiter
+    - UserSpecialCut
+  * He3
+    - msc
+    - ionIoni
+    - nuclearStopping
+    - hadElastic
+    - He3Inelastic
+    - StepLimiter
+    - UserSpecialCut
+  * J/psi
+    - UserSpecialCut
+  * Ps-1s
+    - UserSpecialCut
+  * Ps-2s
+    - UserSpecialCut
+  * Upsilon
+    - UserSpecialCut
+  * alpha
+    - msc
+    - ionIoni
+    - nuclearStopping
+    - hadElastic
+    - alphaInelastic
+    - StepLimiter
+    - UserSpecialCut
+  * alpha+
+    - StepLimiter
+    - UserSpecialCut
+  * anti_B0
+    - UserSpecialCut
+  * anti_Bs0
+    - UserSpecialCut
+  * anti_D0
+    - UserSpecialCut
+  * anti_He3
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_He3Inelastic
+    - hFritiofCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * anti_alpha
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_alphaInelastic
+    - hFritiofCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * anti_deuteron
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_deuteronInelastic
+    - hFritiofCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * anti_kaon0
+    - UserSpecialCut
+  * anti_lambda
+    - hadElastic
+    - anti-lambdaInelastic
+    - UserSpecialCut
+  * anti_lambda_b
+    - UserSpecialCut
+  * anti_lambda_c+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * anti_neutron
+    - hadElastic
+    - anti_neutronInelastic
+    - UserSpecialCut
+  * anti_nu_e
+    - UserSpecialCut
+  * anti_nu_mu
+    - UserSpecialCut
+  * anti_nu_tau
+    - UserSpecialCut
+  * anti_omega-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_omega-Inelastic
+    - StepLimiter
+    - UserSpecialCut
+  * anti_omega_b-
+    - StepLimiter
+    - UserSpecialCut
+  * anti_omega_c0
+    - UserSpecialCut
+  * anti_proton
+    - msc
+    - hIoni
+    - hBrems
+    - hPairProd
+    - nuclearStopping
+    - hadElastic
+    - anti_protonInelastic
+    - hFritiofCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * anti_sigma+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_sigma+Inelastic
+    - hFritiofCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * anti_sigma-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_sigma-Inelastic
+    - StepLimiter
+    - UserSpecialCut
+  * anti_sigma0
+    - UserSpecialCut
+  * anti_sigma_b+
+    - StepLimiter
+    - UserSpecialCut
+  * anti_sigma_b-
+    - StepLimiter
+    - UserSpecialCut
+  * anti_sigma_b0
+    - UserSpecialCut
+  * anti_sigma_c+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * anti_sigma_c++
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * anti_sigma_c0
+    - UserSpecialCut
+  * anti_triton
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_tritonInelastic
+    - hFritiofCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * anti_xi-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - anti_xi-Inelastic
+    - StepLimiter
+    - UserSpecialCut
+  * anti_xi0
+    - hadElastic
+    - anti_xi0Inelastic
+    - UserSpecialCut
+  * anti_xi_b-
+    - StepLimiter
+    - UserSpecialCut
+  * anti_xi_b0
+    - UserSpecialCut
+  * anti_xi_c+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * anti_xi_c0
+    - UserSpecialCut
+  * carbon
+    - StepLimiter
+    - UserSpecialCut
+  * chargedgeantino
+    - StepLimiter
+    - UserSpecialCut
+  * deuteron
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - dInelastic
+    - StepLimiter
+    - UserSpecialCut
+  * e+
+    - msc
+    - eIoni
+    - eBrem
+    - ePairProd
+    - annihil
+    - positronNuclear
+    - StepLimiter
+    - UserSpecialCut
+  * e-
+    - msc
+    - eIoni
+    - eBrem
+    - ePairProd
+    - electronNuclear
+    - StepLimiter
+    - UserSpecialCut
+  * eta
+    - UserSpecialCut
+  * eta_prime
+    - UserSpecialCut
+  * etac
+    - UserSpecialCut
+  * gamma
+    - phot
+    - compt
+    - conv
+    - Rayl
+    - photonNuclear
+    - UserSpecialCut
+  * geantino
+    - UserSpecialCut
+  * helium
+    - UserSpecialCut
+  * hybridino
+    - UserSpecialCut
+  * hydrogen
+    - UserSpecialCut
+  * iron
+    - StepLimiter
+    - UserSpecialCut
+  * kaon+
+    - msc
+    - hIoni
+    - hBrems
+    - hPairProd
+    - hadElastic
+    - kaon+Inelastic
+    - StepLimiter
+    - UserSpecialCut
+  * kaon-
+    - msc
+    - hIoni
+    - hBrems
+    - hPairProd
+    - hadElastic
+    - kaon-Inelastic
+    - hBertiniCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * kaon0
+    - UserSpecialCut
+  * kaon0L
+    - hadElastic
+    - kaon0LInelastic
+    - UserSpecialCut
+  * kaon0S
+    - hadElastic
+    - kaon0SInelastic
+    - UserSpecialCut
+  * lambda
+    - hadElastic
+    - lambdaInelastic
+    - UserSpecialCut
+  * lambda_b
+    - UserSpecialCut
+  * lambda_c+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * mu+
+    - msc
+    - muIoni
+    - muBrems
+    - muPairProd
+    - muonNuclear
+    - StepLimiter
+    - UserSpecialCut
+  * mu-
+    - msc
+    - muIoni
+    - muBrems
+    - muPairProd
+    - muonNuclear
+    - muMinusCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * neutron
+    - hadElastic
+    - neutronInelastic
+    - nCapture
+    - nFission
+    - UserSpecialCut
+  * nitrogen
+    - StepLimiter
+    - UserSpecialCut
+  * nu_e
+    - UserSpecialCut
+  * nu_mu
+    - UserSpecialCut
+  * nu_tau
+    - UserSpecialCut
+  * omega-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - omega-Inelastic
+    - hBertiniCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * omega_b-
+    - StepLimiter
+    - UserSpecialCut
+  * omega_c0
+    - UserSpecialCut
+  * opticalphoton
+    - UserSpecialCut
+  * oxygen
+    - StepLimiter
+    - UserSpecialCut
+  * pi+
+    - msc
+    - hIoni
+    - hBrems
+    - hPairProd
+    - hadElastic
+    - pi+Inelastic
+    - StepLimiter
+    - UserSpecialCut
+  * pi-
+    - msc
+    - hIoni
+    - hBrems
+    - hPairProd
+    - hadElastic
+    - pi-Inelastic
+    - hBertiniCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * pi0
+    - UserSpecialCut
+  * proton
+    - msc
+    - hIoni
+    - hBrems
+    - hPairProd
+    - nuclearStopping
+    - hadElastic
+    - protonInelastic
+    - StepLimiter
+    - UserSpecialCut
+  * sigma+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - sigma+Inelastic
+    - StepLimiter
+    - UserSpecialCut
+  * sigma-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - sigma-Inelastic
+    - hBertiniCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * sigma0
+    - UserSpecialCut
+  * sigma_b+
+    - StepLimiter
+    - UserSpecialCut
+  * sigma_b-
+    - StepLimiter
+    - UserSpecialCut
+  * sigma_b0
+    - UserSpecialCut
+  * sigma_c+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * sigma_c++
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * sigma_c0
+    - UserSpecialCut
+  * silicon
+    - StepLimiter
+    - UserSpecialCut
+  * tau+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * tau-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * triton
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - tInelastic
+    - StepLimiter
+    - UserSpecialCut
+  * xi-
+    - msc
+    - hIoni
+    - nuclearStopping
+    - hadElastic
+    - xi-Inelastic
+    - hBertiniCaptureAtRest
+    - StepLimiter
+    - UserSpecialCut
+  * xi0
+    - xi0Inelastic
+    - UserSpecialCut
+  * xi_b-
+    - StepLimiter
+    - UserSpecialCut
+  * xi_b0
+    - UserSpecialCut
+  * xi_c+
+    - msc
+    - hIoni
+    - nuclearStopping
+    - StepLimiter
+    - UserSpecialCut
+  * xi_c0
+    - UserSpecialCut
+
+
+-----------------------------------------------------------------------------
+
+List of processes:
+
+   ===  Process: RadioactiveDecay  ===
+Particle: GenericIon
+
+   ===  Process: Decay  ===
+Particle: mu+
+
+Particle: mu-
+
+Particle: tau+
+
+Particle: tau-
+
+Particle: sigma0
+
+Particle: anti_sigma0
+
+Particle: pi+
+
+Particle: pi-
+
+Particle: pi0
+
+Particle: kaon+
+
+Particle: kaon-
+
+Particle: kaon0L
+
+Particle: kaon0S
+
+Particle: sigma+
+
+Particle: sigma-
+
+Particle: neutron
+
+Particle: lambda
+
+Particle: anti_lambda
+
+Particle: xi-
+
+Particle: anti_xi-
+
+Particle: anti_sigma+
+
+Particle: anti_sigma-
+
+Particle: omega-
+
+Particle: anti_omega-
+
+Particle: xi0
+
+Particle: anti_xi0
+
+
